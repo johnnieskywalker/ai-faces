@@ -13,7 +13,7 @@ contract AiFacesTest is Test {
         vm.stopPrank();
     }
 
-    function shouldMintOneToken() public {
+    function testShouldIncreaseBalanceByOneWhenSingleTokenMinted() public {
         myNFT.mint(1);
         assertEq(myNFT.balanceOf(address(this)), 1);
     }
