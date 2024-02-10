@@ -4,6 +4,7 @@ pragma solidity 0.8.19;
 import {ERC721A} from "../lib/ERC721A/contracts/ERC721A.sol";
 
 contract AiFaces is ERC721A {
+    uint256 public constant MAX_SUPPLY = 107;
     string public baseURI = "https://raw.githubusercontent.com/johnnieskywalker/ai-faces/main/pictures/";
     address public owner;
 
@@ -17,6 +18,7 @@ contract AiFaces is ERC721A {
     }
 
     function mint(uint256 quantity) public {
+        require(totalSupply() + quantity <= MAX_SUPPLY, "Exceeds maximum supply");
         _mint(msg.sender, quantity);
     }
 
