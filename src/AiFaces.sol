@@ -4,7 +4,7 @@ pragma solidity 0.8.19;
 import {ERC721A} from "../lib/ERC721A/contracts/ERC721A.sol";
 
 contract AiFaces is ERC721A {
-    string public baseURI = "https://github.com/johnnieskywalker/ai-faces/tree/main/pictures/";
+    string public baseURI = "https://raw.githubusercontent.com/johnnieskywalker/ai-faces/main/pictures/";
     address public owner;
 
     modifier onlyOwner() {

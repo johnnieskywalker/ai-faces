@@ -20,7 +20,7 @@ contract AiFacesTest is Test {
 
     function testTokenURI() public {
         myNFT.mint(1);
-        string memory expectedTokenURI = "https://github.com/johnnieskywalker/ai-faces/tree/main/pictures/0";
+        string memory expectedTokenURI = "https://raw.githubusercontent.com/johnnieskywalker/ai-faces/main/pictures/0";
         string memory actualTokenURI = myNFT.tokenURI(0);
         assertEq(actualTokenURI, expectedTokenURI, "The tokenURI does not match the expected value.");
     }
