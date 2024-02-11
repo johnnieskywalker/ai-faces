@@ -99,3 +99,42 @@ transactionIndex        0
 type                    2
 to                      0x5fbd…0aa3
 ```
+
+# Deploy to testnet
+
+You can deploy the contract using forge create command. You'll need to specify the RPC URL (if not set as an environment variable), the private key of your wallet (consider using environment variables or a secure method to pass this information), and the path to your contract.
+
+Important: Do not directly input your private key into the terminal or store it in an insecure location. Consider using environment variables or a secure vault.
+
+```sh
+forge create src/AiFaces.sol:AiFaces --rpc-url $RPC_URL --private-key $PRIVATE_KEY
+```
+
+Existing testnet deployments:
+
+https://goerli.etherscan.io/address/0x20918C3ddF482e886DE87Fd5757903dc2A3F6cC2
+
+To verify
+
+```sh
+export ETHERSCAN_API_KEY=YOUR_API_KEY &&
+forge verify-contract --chain-id goerli 0x20918C3ddF482e886DE87Fd5757903dc2A3F6cC2 src/AiFaces.sol:AiFaces --watch
+```
+(or other address)
+# Mainnet deployment
+
+Contract was deployed to BASE mainnet:
+
+```sh
+Deployer: 0xedE94599d2cfA54812b8afb356D29eCB07C7758d
+Deployed to: 0xc0b5A02845b179B709805DEfeFd9361A5704BaCd
+Transaction hash: 0x50d7553a1c33905972c64514833660b3e79d535e1147b10cf757b706aca8b992
+```
+
+# Mint on mainet from your terminal (secure your private key or use one for just one time use)
+
+```sh
+export ETH_PRIVATE_KEY=YOUR_PRIVATE_KEY
+
+DATA=$(cast abi-encode "mint(uint256)" QUANTITY)
+```
