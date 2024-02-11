@@ -29,4 +29,13 @@ contract AiFaces is ERC721A {
     function _baseURI() internal view virtual override returns (string memory) {
         return baseURI;
     }
+
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        if (!_exists(tokenId)) revert URIQueryForNonexistentToken();
+
+        string memory baseURI = _baseURI();
+        return bytes(baseURI).length != 0
+            ? string.concat(string(abi.encodePacked(baseURI, _toString(tokenId))), ".json")
+            : "";
+    }
 }
