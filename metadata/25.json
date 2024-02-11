@@ -1,0 +1,23 @@
+{
+    "name": "AiFace #25",
+    "description": "A unique AiFace NFT by a glitch artist, representing digital abstraction and aesthetic disruption. Created by banantosh_.",
+    "image": "https://raw.githubusercontent.com/johnnieskywalker/ai-faces/main/pictures/25.jpg",
+    "attributes": [
+        {
+            "trait_type": "Bluescreen Error",
+            "value": "0x000000EF"
+        },
+        {
+            "trait_type": "Kernel Panic",
+            "value": "0xBADCAFE"
+        },
+        {
+            "trait_type": "Pixel Disruption",
+            "value": "Severe"
+        },
+        {
+            "trait_type": "Bluescreen Error",
+            "value": "0x000000EF"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "AiFace #79",
+    "description": "A unique AiFace NFT by a glitch artist, representing digital abstraction and aesthetic disruption. Created by banantosh_.",
+    "image": "https://raw.githubusercontent.com/johnnieskywalker/ai-faces/main/pictures/79.jpg",
+    "attributes": [
+        {
+            "trait_type": "Underflow Error",
+            "value": "banantosh_Underflow"
+        },
+        {
+            "trait_type": "Controller Disconnect",
+            "value": "PS1_Controller_Lost"
+        },
+        {
+            "trait_type": "Bluescreen Error",
+            "value": "0xDEADBEEF"
+        },
+        {
+            "trait_type": "Bluescreen Error",
+            "value": "0x000000EF"
+        }
+    ]
+}
