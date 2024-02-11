@@ -5,7 +5,7 @@ import {ERC721A} from "../lib/ERC721A/contracts/ERC721A.sol";
 
 contract AiFaces is ERC721A {
     uint256 public constant MAX_SUPPLY = 107;
-    string public baseURI = "https://raw.githubusercontent.com/johnnieskywalker/ai-faces/main/pictures/";
+    string public baseURI = "https://raw.githubusercontent.com/johnnieskywalker/ai-faces/main/metadata/";
     address public owner;
 
     modifier onlyOwner() {
