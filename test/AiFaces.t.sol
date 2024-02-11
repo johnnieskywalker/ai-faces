@@ -18,7 +18,7 @@ contract AiFacesTest is Test {
         assertEq(myNFT.balanceOf(address(this)), 1);
     }
 
-    function testCorrectTokenURIRetrieval() public {
+    function testShouldRetrieveCorrectTokenURI() public {
         myNFT.mint(1);
         // Assuming the base URI is set to "https://raw.githubusercontent.com/johnnieskywalker/ai-faces/main/pictures/"
         // and the contract appends the token ID directly to the base URI. TODO add metadata
@@ -27,7 +27,7 @@ contract AiFacesTest is Test {
         assertEq(actualTokenURI, expectedTokenURI, "The tokenURI should correctly reflect the token's metadata URI.");
     }
 
-    function testSetBaseURI() public {
+    function testShouldSetBaseURIWhenCalledByOwner() public {
         vm.startPrank(address(this));
         string memory newBaseURI = "https://newexample.com/";
         myNFT.setBaseURI(newBaseURI);
@@ -48,5 +48,15 @@ contract AiFacesTest is Test {
         vm.expectRevert("Exceeds maximum supply");
         // Attempt to mint more than the MAX_SUPPLY
         myNFT.mint(108);
+    }
+
+    function testShouldRevertMintingWhenAttemptingToMintOneMoreAfterMaxSupplyReached() public {
+        // First, mint up to the maximum supply
+        uint256 maxSupply = 107;
+        myNFT.mint(maxSupply);
+
+        // Then, attempt to mint one more NFT and expect it to revert with "Exceeds maximum supply"
+        vm.expectRevert("Exceeds maximum supply");
+        myNFT.mint(1);
     }
 }
