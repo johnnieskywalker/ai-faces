@@ -2,6 +2,8 @@
 
 https://mint.fun/base/0xc0b5A02845b179B709805DEfeFd9361A5704BaCd
 
+# What is this project about?
+
 **AI Faces: A Harmonious Fusion of Artificial Intelligence and Artistic Mastery**
 
 AI Faces represents a groundbreaking collaboration between the boundless imagination of artificial intelligence and the skilled hand of a human artist. In this unique project, AI takes the initial step, conceptualizing faces with an almost ethereal insight into the myriad expressions of human emotion. But these digital dreams do not remain confined to the realm of algorithms and data; they serve as the muse for the renowned glitch artist, banantosh_.
