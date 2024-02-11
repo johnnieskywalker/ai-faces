@@ -2,11 +2,16 @@
 pragma solidity 0.8.19;
 
 import {ERC721A} from "../lib/ERC721A/contracts/ERC721A.sol";
+// import {Counter} from "@openzeppelin/contracts/drafts/Counters.sol";
 
 contract AiFaces is ERC721A {
     uint256 public constant MAX_SUPPLY = 107;
     string public baseURI = "https://raw.githubusercontent.com/johnnieskywalker/ai-faces/main/pictures/";
     address public owner;
+
+    // using Counters for Counters.Counter;
+
+    // Counters.Counter private _tokenIds;
 
     modifier onlyOwner() {
         require(msg.sender == owner, "sender is not the owner");

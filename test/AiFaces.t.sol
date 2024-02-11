@@ -21,7 +21,7 @@ contract AiFacesTest is Test {
     function testCorrectTokenURIRetrieval() public {
         myNFT.mint(1);
         // Assuming the base URI is set to "https://raw.githubusercontent.com/johnnieskywalker/ai-faces/main/pictures/"
-        // and the contract appends the token ID directly to the base URI.
+        // and the contract appends the token ID directly to the base URI. TODO add metadata
         string memory expectedTokenURI = "https://raw.githubusercontent.com/johnnieskywalker/ai-faces/main/pictures/0";
         string memory actualTokenURI = myNFT.tokenURI(0);
         assertEq(actualTokenURI, expectedTokenURI, "The tokenURI should correctly reflect the token's metadata URI.");
